@@ -199,6 +199,36 @@
 					"color": "#88b3d1b3",
 					"name": "Color 1",
 					"slug": "custom-color-1"
+				},
+			    {
+					"slug": "highlight1",
+					"color": "#F9FE88",
+					"name": "Highlight 1"
+				},
+				{
+					"slug": "highlight2",
+					"color": "#E88080",
+					"name": "Highlight 2"
+				},
+				{
+					"slug": "highlight3",
+					"color": "#C1E3C1",
+					"name": "Highlight 3"
+				},
+				{
+					"color": "#ffffff",
+					"name": "White",
+					"slug": "white"
+				},
+				{
+					"color": "#000000",
+					"name": "Black",
+					"slug": "black"
+				},
+				{
+					"slug": "transparent",
+					"color": "transparent",
+					"name": "Transparent"
 				}
 			]
 		},

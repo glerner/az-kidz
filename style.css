@@ -29,7 +29,7 @@ from https://equalizedigital.com/accessibility-checker/empty-link/ */
 	overflow:hidden;
  }
 
- /* Headers are manually colored, have to be individually edited; give at least background color so red is high contrast
+ /* some Headers were manually colored in HTML, have to be individually edited; give at least background color so red is high contrast
  h1, h2, h2.wp-block-heading {
 	 color: royalblue;
 	 background-color: bisque;
@@ -49,15 +49,15 @@ from https://equalizedigital.com/accessibility-checker/empty-link/ */
  .wp-block-uagb-buttons .uagb-block-3c418cd2 .uagb-buttons-repeater .uagb-button__link */
  .uagb-button__link,
  .wp-block-post-content .wp-block-uagb-buttons .uagb-buttons-repeater .uagb-button__link {
-	 background-color: var(--wp--preset--color--accent-dark);
-	 color: var(--wp--preset--color--white);
+	 background-color: var(--wp--preset--color--accent-dark,var(--wp--preset--color--accent-3,lightgreen));
+	 color: var(--wp--preset--color--white,var(--wp--preset--color--base-2, white));
 	 text-decoration: none;
  }
 
  .wp-block-post-content a:where(:not(.wp-element-button, .wp-block-uagb-buttons)),
  .uagb-button__link, .wp-block-post-content .wp-block-button__link {
-	 color: var(--wp--preset--color--accent-dark, black);
-	 background-color: var(--wp--preset--color--white, lightgreen);
+	 color: var(--wp--preset--color--accent-dark, var(--wp--preset--color--accent-3,black));
+	 background-color: var(--wp--preset--color--white,var(--wp--preset--color--base-2, white));
 
  }
 
@@ -82,18 +82,18 @@ details[open] summary::-webkit-details-marker {
 /* styling for WS Form */
 
 .wsf-field, input[type="checkbox"].wsf-field + label.wsf-label, input[type="checkbox"].wsf-field + label.wsf-label::before {
-	color: var(--wp--preset--color--foreground);
-    background-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--foreground,var(--wp--preset--color--contrast, black));
+    background-color: var(--wp--preset--color--secondary,var(--wp--preset--color--accent-2, black));
 }
 .ws-form .wsf-alert {
-	background-color: var(--wp--preset--color--secondary);
-    border-color: var(--wp--preset--color--secondary);
-	color: var(--wp--preset--color--foreground);
+	background-color: var(--wp--preset--color--secondary,white);
+    border-color: var(--wp--preset--color--secondary,lightgreen);
+	color: var(--wp--preset--color--foreground,black);
 }
 .wsf-help {
-	color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--foreground,black);
 	display: block;
-	font-size: var(--wp--preset--font-size--normal);
+	font-size: var(--wp--preset--font-size--normal,1em);
 	line-height: 1.4;
 	margin-top: 5px;
 }
@@ -130,7 +130,7 @@ a, .elementor a:where(:not(.wp-element-button, .uagb-button__wrapper)) {
     text-decoration: underline;
     text-decoration-thickness: .15em;  /* .25rem all the same thickness made too thick for tiny text */
     text-underline-offset: .25em;		/* em so offset on large fonts clears descenders */
-    color: var(--wp--preset--color--accent-dark);
+    color: var(--wp--preset--color--accent-dark,var(--wp--preset--color--accent-2, blue));
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -149,24 +149,24 @@ a:hover {
 
 /* Spectra highlight color, in the "Highlight" icon of the block's toolbar */
 .uagb-highlight {
-    background-color: var(--wp--preset--color--highlight1);
-    color: var(--wp--preset--color--black);
+    background-color: var(--wp--preset--color--highlight1,var(--wp--preset--color--base-2, white));
+    color: var(--wp--preset--color--black,var(--wp--preset--color--accent-2, black));
 }
 
 /* Spectra block quote */
 .wp-block-uagb-blockquote.uagb-blockquote__skin-border blockquote.uagb-blockquote {
     /* .uagb-block-b0271a66.uagb-blockquote__skin-border blockquote.uagb-blockquote */
-    border-color: var(--wp--preset--color--tertiary-darker);
+    border-color: var(--wp--preset--color--tertiary-darker,var(--wp--preset--color--contrast-3, pink));
 }
 .wp-block-uagb-blockquote cite.uagb-blockquote__author {
-    color: var(--wp--preset--color--tertiary-darker);
+    color: var(--wp--preset--color--tertiary-darker,var(--wp--preset--color--contrast-3, pink));
 }
 
 /* Spectra Cover block */
 /* .wp-block-uagb-advanced-heading p.uagb-desc-text.rich-text, .wp-block-uagb-advanced-heading h2.uagb-heading-text { */
 .block-color-primarylight {
-    background-color: var(--wp--preset--color--primary-lighter);
-    color: var(--wp--preset--color--black);
+    background-color: var(--wp--preset--color--primary-lighter,var(--wp--preset--color--contrast-2, white));
+    color: var(--wp--preset--color--black,var(--wp--preset--color--base, black));
 }
 
 /* Spectra Post Grid */
@@ -204,11 +204,11 @@ a:hover {
     /* taxonomy grid has text in a div within the link
      * element default has styling like .uagb-block-3d8b49e2.uagb-layout-grid .uagb-tax-link color 777
      */
-    color: var(--wp--preset--color--accent-dark);
+    color: var(--wp--preset--color--accent-dark,var(--wp--preset--color--accent-3, blue));
 }
 .uagb-layout-grid a.uagb-tax-link:hover, .uagb-layout-grid a.uagb-tax-link:hover div {
-    color: var(--wp--preset--color--white);
-    background-color: var(--wp--preset--color--accent-dark);
+    color: var(--wp--preset--color--white,var(--wp--preset--color--base-2, white));
+    background-color: var(--wp--preset--color--accent-dark,var(--wp--preset--color--accent-2, blue));
 }
 
 /* Spectra table of contents block
@@ -220,8 +220,8 @@ a:hover {
 .block-editor-block-list__block .uagb-block-5bfdfd6d .uagb-toc__list-wrap li a {
     font-style: normal;
     text-decoration: underline;
-    color: var(--wp--preset--color--accent-dark);
-    background-color: var(--wp--preset--color--tertiary-lighter);
+    color: var(--wp--preset--color--accent-dark,var(--wp--preset--color--accent-2, blue));
+    background-color: var(--wp--preset--color--tertiary-lighter,var(--wp--preset--color--accent-2, lightgreen));
 }
 
 /* from Responsive flexbox tables, by David Miller https://codepen.io/Orangetronic/pen/pJgpXw
@@ -233,11 +233,11 @@ tr, .wp-block-table tr {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0.5em 0 1em;
-    border: 2px solid var(--wp--preset--color--tertiary-lighter);
+    border: 2px solid var(--wp--preset--color--tertiary-lighter,var(--wp--preset--color--accent-2, lightgreen));
 }
 td, th, .wp-block-table td, .wp-block-table th {
     flex: 1 1 250px;
-    border: 1px solid var(--wp--preset--color--secondary-lighter);
+    border: 1px solid var(--wp--preset--color--tertiary-lighter,var(--wp--preset--color--accent-2, lightgreen));
     padding: .5em;
 }
 
@@ -254,7 +254,7 @@ td, th, .wp-block-table td, .wp-block-table th {
 }
 .is-striped {
     /* background-image: linear-gradient(0, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)); */
-    background-image: var(--wp--preset--gradient--primary-gradient);
+    background-image: var(--wp--preset--gradient--primary-gradient,var(--table--stripe--odd));
 }
 figure.wp-block-table.is-striped {
     background-image: none;
