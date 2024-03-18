@@ -1,0 +1,390 @@
+/*
+Theme Name: AZ Kidz
+Theme URI:  https://website-tech.glerner.com
+Template:   twentytwentyfour
+Author:     George Lerner
+Author URI: https://glerner.com
+Description:    AZ Kidz is a Twenty Twenty-Four child theme
+Requires at least: 6.4
+Tested up to: 6.4.3
+Requires PHP: 7.4
+Version: 1.04
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+
+:root {
+	--wp--preset--font-family--body: var(--wp--preset--font-family--wide-sans-serif);
+}
+
+/* Screen Reader only
+from https://equalizedigital.com/accessibility-checker/empty-link/ */
+.sr-only{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+ }
+
+ /* Headers are manually colored, have to be individually edited; give at least background color so red is high contrast
+ h1, h2, h2.wp-block-heading {
+	 color: royalblue;
+	 background-color: bisque;
+ }
+*/
+
+ /* Links */
+ .wp-block-post-content a:where(:not(.wp-element-button, .wp-block-uagb-buttons)),
+ .wp-block-post-content .wp-block-button__link {
+	 color: var(--wp--preset--color--accent-dark, black);
+	 background-color: var(--wp--preset--color--white, lightgreen);
+ }
+ /* button settings set these:
+ .wp-block-uagb-buttons .uagb-block-3c418cd2 .uagb-button__wrapper .uagb-buttons-repeater
+ .wp-block-uagb-buttons .uagb-block-3c418cd2.wp-block-uagb-buttons-child .uagb-buttons-repeater
+ .wp-block-uagb-buttons .uagb-block-3c418cd2 .wp-block-button__link
+ .wp-block-uagb-buttons .uagb-block-3c418cd2 .uagb-buttons-repeater .uagb-button__link */
+ .uagb-button__link,
+ .wp-block-post-content .wp-block-uagb-buttons .uagb-buttons-repeater .uagb-button__link {
+	 background-color: var(--wp--preset--color--accent-dark);
+	 color: var(--wp--preset--color--white);
+	 text-decoration: none;
+ }
+
+ .wp-block-post-content a:where(:not(.wp-element-button, .wp-block-uagb-buttons)),
+ .uagb-button__link, .wp-block-post-content .wp-block-button__link {
+	 color: var(--wp--preset--color--accent-dark, black);
+	 background-color: var(--wp--preset--color--white, lightgreen);
+
+ }
+
+details {
+    margin: 1rem;
+}
+summary {
+    font-weight: bold;
+    list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  }
+    details[open] summary {
+    list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+summary::-webkit-details-marker {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+    color: transparent;
+}
+details[open] summary::-webkit-details-marker {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+
+/* styling for WS Form */
+
+.wsf-field, input[type="checkbox"].wsf-field + label.wsf-label, input[type="checkbox"].wsf-field + label.wsf-label::before {
+	color: var(--wp--preset--color--foreground);
+    background-color: var(--wp--preset--color--secondary);
+}
+.ws-form .wsf-alert {
+	background-color: var(--wp--preset--color--secondary);
+    border-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--foreground);
+}
+.wsf-help {
+	color: var(--wp--preset--color--foreground);
+	display: block;
+	font-size: var(--wp--preset--font-size--normal);
+	line-height: 1.4;
+	margin-top: 5px;
+}
+/* end WS Form */
+
+/* Login Form styling from https://developer.wordpress.org/news/2023/08/adding-and-using-custom-settings-in-theme-json/ */
+
+input:where( :not( [type=checkbox] ):not( [type=radio ] ) ),
+select,
+textarea {
+	color: var( --wp--custom--form-input--color, inherit );
+	background: var( --wp--custom--form-input--background, transparent );
+	border: 1px solid var( --wp--custom--form-input--border-color, currentColor );
+}
+.wp-block-loginout form {
+	display: grid;
+	grid-template-columns: repeat( 1, 1fr );
+	gap: var( --wp--style--block-gap );
+}
+.wp-block-loginout form > * {
+	margin: 0;
+}
+.wp-block-loginout form input:not([type=submit]):not([type=checkbox]):not([type=hidden]) {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+}
+
+/* end Login form */
+
+/* big CSS hover underline, thin un-hovered */
+a, .elementor a:where(:not(.wp-element-button, .uagb-button__wrapper)) {
+    vertical-align: baseline;
+    text-decoration: underline;
+    text-decoration-thickness: .15em;  /* .25rem all the same thickness made too thick for tiny text */
+    text-underline-offset: .25em;		/* em so offset on large fonts clears descenders */
+    color: var(--wp--preset--color--accent-dark);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.elementor-nav-menu--layout-horizontal .elementor-nav-menu a {
+    white-space: nowrap;
+    flex-grow: 1;
+    text-decoration: none;
+}
+a:hover {
+	text-underline-offset: .2em;
+    text-decoration-skip-ink: auto;
+}
+
+/* Spectra (formerly Ultimate Add-ons for Gutenberg) */
+
+/* Spectra highlight color, in the "Highlight" icon of the block's toolbar */
+.uagb-highlight {
+    background-color: var(--wp--preset--color--highlight1);
+    color: var(--wp--preset--color--black);
+}
+
+/* Spectra block quote */
+.wp-block-uagb-blockquote.uagb-blockquote__skin-border blockquote.uagb-blockquote {
+    /* .uagb-block-b0271a66.uagb-blockquote__skin-border blockquote.uagb-blockquote */
+    border-color: var(--wp--preset--color--tertiary-darker);
+}
+.wp-block-uagb-blockquote cite.uagb-blockquote__author {
+    color: var(--wp--preset--color--tertiary-darker);
+}
+
+/* Spectra Cover block */
+/* .wp-block-uagb-advanced-heading p.uagb-desc-text.rich-text, .wp-block-uagb-advanced-heading h2.uagb-heading-text { */
+.block-color-primarylight {
+    background-color: var(--wp--preset--color--primary-lighter);
+    color: var(--wp--preset--color--black);
+}
+
+/* Spectra Post Grid */
+.uagb-post__cta {   /* Read More link */
+    float: right;
+    margin-bottom:15px;
+}
+
+/* Spectra Layout Grid */
+.uagb-taxonomy__outer-wrap.uagb-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: var(--mdc-layout-grid-gutter-phone,12px);
+    grid-row-gap: var(--mdc-layout-grid-gutter-phone,12px);
+}
+.uagb-taxomony-box {
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-color: var(--wp--preset--color--tertiary-lighter);
+    border-style: solid;
+    display: grid;  /* important override of div display block */
+
+}
+.uagb-layout-grid .uagb-tax-link {
+    pointer-events: visible;    /* link should show different mouse pointer */
+    padding: 0;     /* prevent vertical line showing */
+}
+.uagb-layout-grid .uagb-taxomony-box a.uagb-tax-link, .uagb-layout-grid a.uagb-tax-link div {
+    /* taxonomy grid has text in a div within the link
+     * element default has styling like .uagb-block-3d8b49e2.uagb-layout-grid .uagb-tax-link color 777
+     */
+    color: var(--wp--preset--color--accent-dark);
+}
+.uagb-layout-grid a.uagb-tax-link:hover, .uagb-layout-grid a.uagb-tax-link:hover div {
+    color: var(--wp--preset--color--white);
+    background-color: var(--wp--preset--color--accent-dark);
+}
+
+/* Spectra table of contents block
+ * change List color to transparent, then reset
+*/
+.wp-block-uagb-table-of-contents ul.uagb-toc__list, .wp-block-uagb-table-of-contents ol.uagb-toc__list {
+    margin-left: 0;
+}
+.block-editor-block-list__block .uagb-block-5bfdfd6d .uagb-toc__list-wrap li a {
+    font-style: normal;
+    text-decoration: underline;
+    color: var(--wp--preset--color--accent-dark);
+    background-color: var(--wp--preset--color--tertiary-lighter);
+}
+
+/* from Responsive flexbox tables, by David Miller https://codepen.io/Orangetronic/pen/pJgpXw
+ * See also https://css-tricks.com/accessible-simple-responsive-tables/
+*/
+table.table { width: 100%; }
+tr, .wp-block-table tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5em 0 1em;
+    border: 2px solid var(--wp--preset--color--tertiary-lighter);
+}
+td, th, .wp-block-table td, .wp-block-table th {
+    flex: 1 1 250px;
+    border: 1px solid var(--wp--preset--color--secondary-lighter);
+    padding: .5em;
+}
+
+/* Zebra striping, from https://codepen.io/davidelrizzo/pen/BjXBrz  then View Compiled CSS
+ * See main page https://css-tricks.com/accessible-simple-responsive-tables/
+ *   ========================================================================== */
+:root {
+    --table--stripe--odd: linear-gradient(135deg,#517FA4,#F3CC9A);
+    --table--stripe--even: #A0B7CD;
+    /* can't define CSS variables using variables
+     * --table--stripe--odd: var(--wp--preset--gradient--primary-gradient);
+    --table--stripe--even: var(--wp--preset--color--primary-lighter);
+    */
+}
+.is-striped {
+    /* background-image: linear-gradient(0, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)); */
+    background-image: var(--wp--preset--gradient--primary-gradient);
+}
+figure.wp-block-table.is-striped {
+    background-image: none;
+}
+figure.wp-block-table.is-striped tr:nth-child(even) {
+    background-color: var(--table--stripe--even);
+    /* if gradient, background-image: var(--table--stripe--even); */
+}
+figure.wp-block-table.is-striped tr:nth-child(odd) {
+    background-image: var(--table--stripe--odd);
+    /* background-image: var(--wp--preset--gradient--secondary-gradient) */
+    /* background-image: linear-gradient(0, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)); */
+}
+
+
+/* Header styles */
+
+/* Footer styles */
+
+/* AI Toolkit button, so AI Toolkit and Accessibility Checker buttons aren't covering each other */
+.mwai-chat.T9GqU1_HCj_oHtw9lgwt {
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    width: 64px;
+}
+/* Accessibility Checker button */
+.edac-highlight-panel {
+    bottom: 19px!important;
+    position: fixed!important;
+    right: calc(64px + 15px)!important;
+    width: auto;
+}
+
+/* Don't print elements
+ * assign class "no-print" to an element
+ */
+@media print
+{
+    .no-print, .no-print * {
+        display: none !important;
+    }
+    a::after {
+        content: " (" attr(href) ")";
+    }
+    figure a::after {
+        content: none;
+    }
+}
+
+@media print {
+	body {
+		background: #fff none !important;
+		color: #000;
+	}
+    #wrapper {
+        clear: both !important;
+        display: block !important;
+        float: none !important;
+        position: relative !important;
+    }
+	#header {
+		border-bottom: 2pt solid #000;
+		padding-bottom: 18pt;
+	}
+	#container,
+	#header,
+	#footer {
+		margin: 0;
+		width: 100%;
+	}
+	h1, h2, h3, h2.wp-block-heading {
+        break-after: avoid-page;
+    }
+    /* site title fill space without site header-menu */
+    header.wp-block-template-part div, header.wp-block-template-part div div, header header, header p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    header p {
+        font-size: 1.5rem;
+    }
+    header.wp-block-template-part header.pad-section--m {
+        margin: 0;
+        padding: 0;
+    }
+    .wp-block-uagb-container.uagb-is-root-container .uagb-block-a0c1171f {
+        max-width: 100% !important;
+        width: 100%;
+    }
+    .wp-block-uagb-container.uagb-block-4cf4b7a4 {
+        min-height: 1em;
+        row-gap: 5px;
+        column-gap: 10px;
+    }
+    main#wp--skip-link--target {
+        margin-top: -.5em !important;
+    }
+    .wp-block-group {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        min-height: 1em;
+    }
+    .entry-content {
+		font-size: 14pt;
+		line-height: 1.6em;
+	}
+	.entry-title {
+		font-size: 21pt;
+	}
+    .has-large-font-size {
+        font-size: 1.2em;
+    }
+    div.wp-block-cover p {
+        color: black;
+        background: lightgray;
+        opacity: .8;
+    }
+    /* Hide unnecessary print items */
+	#access,
+	#branding img,
+	#respond,
+    nav.header-menu, .wp-block-uagb-container .uagb-block-1a3d352d, /* .uagb-block-1a3d352d is nav menu container */
+    #edac-highlight-panel, #mwai-chatbot-default,
+    div.wp-block-comments, footer.wp-block-template-part,
+	.comment-edit-link,
+	.edit-link,
+	.navigation,
+	.page-link,
+	.widget-area {
+		display: none !important;
+	}
+}
