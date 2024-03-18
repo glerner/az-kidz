@@ -14,9 +14,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
 
+/* Nope doesn't work here, duplicate the font family as body in theme.json
 :root {
-	--wp--preset--font-family--body: var(--wp--preset--font-family--wide-sans-serif);
+    --wp--preset--font-family--body: var(--wp--preset--font-family--wide-sans-serif);
 }
+*/
 
 /* Screen Reader only
 from https://equalizedigital.com/accessibility-checker/empty-link/ */

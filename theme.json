@@ -300,6 +300,11 @@
 				  "slug": "wide-sans-serif"
 				},
 				{
+					"fontFamily": "\"DejaVu Sans\", \"Bitstream Vera Sans\", \"Geneva\", \"Verdana\"",
+					"name": "Body",
+					"slug": "body"
+				  },
+				  {
 				  "fontFamily": "\"Liberation Serif\", \"Nimbus Roman No 9 L\", \"FreeSerif\", \"Hoefler Text\", \"Times\", \"Times New Roman\", serif",
 				  "name": "Narrow Serif",
 				  "slug": "narrow-serif"
@@ -322,7 +327,7 @@
 							"fontWeight": "400 600",
 							"src": [
 								"file:./assets/fonts/spectra/lemonada-400-normal1.woff2",
-								"file:./assets/fonts/spectra/lemonada-600-normal1.woff2"
+								"file:./assets/fonts/spectra/lemonada-600-normal2.woff2"
 							]
 						}
 
@@ -1038,7 +1043,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontFamily": "var(--wp--preset--font-family--wide-sans-serif)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"fontStyle": "normal",
 			"fontWeight": "400",
