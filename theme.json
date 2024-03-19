@@ -863,7 +863,10 @@
 					"button": {
 						"border": {
 							"radius": {
-								"ref": "styles.elements.button.border.radius"
+								"bottomLeft": "var(--radius-md)",
+								"bottomRight": "var(--radius-md)",
+								"topLeft": "var(--radius-md)",
+								"topRight": "var(--radius-md)"
 							}
 						}
 					}
