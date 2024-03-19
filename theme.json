@@ -332,17 +332,16 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "Lemonada",
+							"fontFamily": "Andika New Basic",
 							"fontStyle": "normal",
-							"fontWeight": "400 600",
+							"fontWeight": "400 700",
 							"src": [
-								"file:./assets/fonts/spectra/lemonada-400-normal1.woff2",
-								"file:./assets/fonts/spectra/lemonada-600-normal2.woff2"
+								"file:./assets/fonts/andika-v22-latin-regular.woff2",
+								"file:./assets/fonts/andika-v22-latin-700.woff2"
 							]
 						}
-
 					],
-					"fontFamily": "\"Lemonada\", \"Bitstream Charter\", \"URW Palladio L\", \"Cormorant Garamond\", \"FreeSerif\", \"Palatino\", \"Palatino Linotype\", \"Book Antiqua\", serif ",
+					"fontFamily": "\"Andika New Basic\", \"Bitstream Charter\", \"URW Palladio L\", \"Cormorant Garamond\", \"FreeSerif\", \"Palatino\", \"Palatino Linotype\", \"Book Antiqua\", serif ",
 					"name": "Heading Font",
 					"slug": "heading"
 				},
@@ -1033,7 +1032,7 @@
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading)",
-					"fontWeight": "600",
+					"fontWeight": "700",
 					"lineHeight": "1.3"
 				}
 			},
