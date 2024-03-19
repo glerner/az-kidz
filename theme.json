@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.4/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"customTemplates": [
 		{
 			"name": "page-no-title",
@@ -146,12 +146,12 @@
 			],
 			"palette": [
 				{
-					"color": "#f9f9f9",
+					"color": "#B5A7DD",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#f9f9f9",
+					"color": "#B5A7DD",
 					"name": "Background",
 					"slug": "background"
 				},
