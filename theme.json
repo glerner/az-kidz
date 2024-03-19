@@ -151,6 +151,11 @@
 					"slug": "base"
 				},
 				{
+					"color": "#f9f9f9",
+					"name": "Background",
+					"slug": "background"
+				},
+				{
 					"color": "#ffffff",
 					"name": "Base Two",
 					"slug": "base-2"
@@ -158,6 +163,11 @@
 				{
 					"color": "#111111",
 					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#111111",
+					"name": "Text",
 					"slug": "contrast"
 				},
 				{
