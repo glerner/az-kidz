@@ -147,23 +147,8 @@
 			"palette": [
 				{
 					"color": "#B5A7DD",
-					"name": "Base",
-					"slug": "base"
-				},
-				{
-					"color": "#B5A7DD",
 					"name": "Background",
 					"slug": "background"
-				},
-				{
-					"color": "#ffffff",
-					"name": "Base Two",
-					"slug": "base-2"
-				},
-				{
-					"color": "#111111",
-					"name": "Contrast",
-					"slug": "contrast"
 				},
 				{
 					"color": "#111111",
@@ -171,61 +156,121 @@
 					"slug": "text"
 				},
 				{
-					"color": "#636363",
-					"name": "Contrast Two",
-					"slug": "contrast-2"
-				},
-				{
-					"color": "#A4A4A4",
-					"name": "Contrast Three",
-					"slug": "contrast-3"
-				},
-				{
-					"color": "#cfcabe",
-					"name": "Accent",
+					"color": "#FFD700",
+					"name": "Cheerful Sunshine",
+					"slug": "primary"
+				  },
+				  {
+					"color": "#FFF8C2",
+					"name": "Cheerful Sunshine lighter",
+					"slug": "primary-lighter"
+				  },
+				  {
+					"color": "#FFF1C2",
+					"name": "Cheerful Sunshine light",
+					"slug": "primary-light"
+				  },
+				  {
+					"color": "#DBA900",
+					"name": "Cheerful Sunshine dark",
+					"slug": "primary-dark"
+				  },
+				  {
+					"color": "#C09400",
+					"name": "Cheerful Sunshine darker",
+					"slug": "primary-darker"
+				  },
+				  {
+					"color": "#AACCFF",
+					"name": "Trustworthy Sky",
+					"slug": "secondary"
+				  },
+				  {
+					"color": "#D9E2FF",
+					"name": "Trustworthy Sky lighter",
+					"slug": "secondary-lighter"
+				  },
+				  {
+					"color": "#EAF2FF",
+					"name": "Trustworthy Sky light",
+					"slug": "secondary-light"
+				  },
+				  {
+					"color": "#788CC7",
+					"name": "Trustworthy Sky dark",
+					"slug": "secondary-dark"
+				  },
+				  {
+					"color": "#4F69C6",
+					"name": "Trustworthy Sky darker",
+					"slug": "secondary-darker"
+				  },
+				  {
+					"color": "#7CFC00",
+					"name": "Sprout Green",
+					"slug": "tertiary"
+				  },
+				  {
+					"color": "#C7F5C2",
+					"name": "Sprout Green lighter (Ensures AAA contrast)",
+					"slug": "tertiary-lighter"
+				  },
+				  {
+					"color": "#D6F8D6",
+					"name": "Sprout Green light",
+					"slug": "tertiary-light"
+				  },
+				  {
+					"color": "#438000",
+					"name": "Sprout Green dark (Ensures AAA contrast)",
+					"slug": "tertiary-dark"
+				  },
+				  {
+					"color": "#327700",
+					"name": "Sprout Green darker",
+					"slug": "tertiary-darker"
+				  },
+				  {
+					"color": "#FFC0CB",
+					"name": "Playful Berry",
 					"slug": "accent"
-				},
-				{
-					"color": "#c2a990",
-					"name": "Accent Two",
-					"slug": "accent-2"
-				},
-				{
-					"color": "#d8613c",
-					"name": "Accent Three",
-					"slug": "accent-3"
-				},
-				{
-					"color": "#b1c5a4",
-					"name": "Accent Four",
-					"slug": "accent-4"
-				},
-				{
-					"color": "#b5bdbc",
-					"name": "Accent Five",
-					"slug": "accent-5"
-				},
-				{
-					"color": "#88b3d1b3",
-					"name": "Color 1",
-					"slug": "custom-color-1"
-				},
-			    {
-					"slug": "highlight1",
-					"color": "#F9FE88",
-					"name": "Highlight 1"
-				},
-				{
-					"slug": "highlight2",
-					"color": "#E88080",
-					"name": "Highlight 2"
-				},
-				{
-					"slug": "highlight3",
-					"color": "#C1E3C1",
-					"name": "Highlight 3"
-				},
-				{
+				  },
+				  {
+					"color": "#FDF1F3",
+					"name": "Playful Berry lighter",
+					"slug": "accent-lighter"
+				  },
+				  {
+					"color": "#FFF0F2",
+					"name": "Playful Berry light",
+					"slug": "accent-light"
+				  },
+				  {
+					"color": "#D98A97",
+					"name": "Playful Berry dark",
+					"slug": "accent-dark"
+				  },
+				  {
+					"color": "#B35A6A",
+					"name": "Playful Berry darker",
+					"slug": "accent-darker"
+				  },
+				  {
+					"color": "#4F9B00",
+					"name": "Success Banner (Green)",
+					"slug": "highlight-success"
+				  },
+				  {
+					"color": "#DBA900",
+					"name": "Attention Grabber (Yellow)",
+					"slug": "highlight-warning"
+				  },
+				  {
+					"color": "#C0392B",
+					"name": "Warning (Red)",
+					"slug": "highlight-danger"
+				  },
+				  {
 					"color": "#ffffff",
 					"name": "White",
 					"slug": "white"
